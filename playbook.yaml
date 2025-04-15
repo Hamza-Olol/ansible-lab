@@ -1,0 +1,22 @@
+# - name: My first play
+#   hosts: myhosts # name of the hosts group defined in the inventory file
+#   tasks:
+#    - name: Ping my hosts
+#      ansible.builtin.ping:
+
+#    - name: Print message
+#      ansible.builtin.debug:
+#        msg: Hello world
+
+
+- name: Deploy script
+  hosts: myhosts
+  tasks:
+    - name: Copy bash script
+      copy:
+        src: ./local_script.sh
+        dest: /home/ubuntu/script.sh
+        mode: '0755'
+
+    - name: Execute bash script
+      shell: /home/ubuntu/script.sh
