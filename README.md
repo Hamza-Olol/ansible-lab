@@ -1,9 +1,10 @@
-### Ansible lab
+# Ansible lab
 
-# pre req
+## pre req
 using terraform to deploy a remote vm
+install python on mac
 
-# workflow (WIP)
+## workflow (WIP)
 create a virtual env to store installed modules
 
 ```python3 -m venv ansible ```
